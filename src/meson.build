@@ -1,5 +1,5 @@
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-moduledir = join_paths(pkgdatadir, 'hello')
+moduledir = join_paths(pkgdatadir, 'shortcuts')
 gnome = import('gnome')
 
 python = import('python')
@@ -18,11 +18,11 @@ configure_file(
   install_dir: get_option('bindir')
 )
 
-hello_sources = [
+shortcuts_sources = [
   '__init__.py',
   'main.py',
   'window.py',
   'mode_switch.py'
 ]
 
-install_data(hello_sources, install_dir: moduledir)
+install_data(shortcuts_sources, install_dir: moduledir)
